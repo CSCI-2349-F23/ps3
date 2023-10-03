@@ -28,9 +28,23 @@ git clone https://github.com/CSCI-2349-F23/ps3.git
 
 ### Part 1: Bash scripting
 
-1. Write a single line in unix that will do the following for the file `data/csv/movies.csv`: extract the 1st, 2nd, and 8th fields, upcase everything, pick out the lines that contain the phrase "OF THE", then sort alphabetically. You should have XX lines, where the first 5 and last 5 lines are as shown below.
+1. Write a single line in unix that will do the following for the file `data/csv/movies.csv`: extract the 1st, 2nd, and 8th fields, upcase everything, pick out the lines that contain the phrase "OF THE", then sort alphabetically. You should have XX lines, where the first 3 and last 3 lines are as shown below.
 
-2. Write a single line in unix to count in each of the files in the `csv` directory the number of 
+```
+BATTLE OF THE YEAR,SONY,2013
+BEASTS OF THE SOUTHERN WILD,FOX SEARCHLIGHT,2012
+CLASH OF THE TITANS,WARNER BROS,2010
+...
+TRANSFORMERS: REVENGE OF THE FALLEN,PARAMOUNT,2009
+UNDERWORLD: RISE OF THE LYCANS,SONY,2009
+WRATH OF THE TITANS,WARNER BROS,2012
+```
+
+2. Write a single line in unix to count in *each* of the files in the `csv` directory the number of
+
+
+https://corgis-edu.github.io/corgis/csv/classics/
+https://github.com/reisanar/datasets/blob/master/HollywoodMovies.csv
 
 
 ### Part 2: Try it in Python
