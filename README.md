@@ -28,7 +28,7 @@ git clone https://github.com/CSCI-2349-F23/ps3.git
 
 ### Part 1: Bash scripting
 
-1. Write a single line in unix that will do the following for the file `data/csv/movies.csv`: extract the 1st, 2nd, and 8th fields, upcase everything, pick out the lines that contain the phrase "OF THE", then sort alphabetically. You should have XX lines, where the first 3 and last 3 lines are as shown below.
+1. Write a single line with multiple commands in unix that will do the following for the file `data/csv/movies.csv`: extract the 1st, 2nd, and 8th fields, upcase everything, pick out the lines that contain the phrase "OF THE", then sort alphabetically. You should have 29 lines, where the first 3 and last 3 lines are as shown below.
 
 ```
 BATTLE OF THE YEAR,SONY,2013
@@ -40,11 +40,29 @@ UNDERWORLD: RISE OF THE LYCANS,SONY,2009
 WRATH OF THE TITANS,WARNER BROS,2012
 ```
 
-2. Write a single line in unix to count in *each* of the files in the `csv` directory the number of
+2. Create a bash script called `part1.sh`. Make sure the bash script has the important first line at the top. **Then paste in the command you wrote for #1 above.** Then run it from the terminal with `bash part1.sh` and make sure that it does the right thing.
+
+3. Write a single line in unix that does the above for both csv files, then extracts just the first field (the movie or book title), then prints out how many time each movie or book title appears in both files, then sorts that by the number of times. **Add this line of code to `part.sh`.**
+
+You should get 141 lines, and you should find exactly one book from the list that was made into a movie of the same name on this list.   These are the first and last three lines of my output:
+
+```
+      1 1811 DICTIONARY OF THE VULGAR TONGUE
+      1 A DISCOURSE UPON THE ORIGIN AND THE FOUNDATION OF THE INEQUALITY AMONG MANKIND
+      1 A GENERAL HISTORY OF THE PYRATES:: FROM THEIR FIRST RISE AND SETTLEMENT IN THE ISLAND OF PROVIDENCE TO THE PRESENT TIME
+      ...
+      1 UNDERWORLD: RISE OF THE LYCANS
+      1 WRATH OF THE TITANS
+      2 THE HOUND OF THE BASKERVILLES
+```
+
+4. Finally, at the end of `part1.sh`, use a `for` loop to go through each csv file, and for each file write out the output of the command you wrote for #1 to a new file whose name is the same as the input file but replacing `.csv` with `-caps-ofthe.csv`. For example, the output you got for #1 above applied to `movies.csv` be redirected to a file called `movies-caps-ofthe.csv`.
 
 
-https://corgis-edu.github.io/corgis/csv/classics/
-https://github.com/reisanar/datasets/blob/master/HollywoodMovies.csv
+
+Sources for these csv files:
+* https://corgis-edu.github.io/corgis/csv/classics/
+* https://github.com/reisanar/datasets/blob/master/HollywoodMovies.csv
 
 
 ### Part 2: Try it in Python
