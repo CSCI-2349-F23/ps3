@@ -26,7 +26,7 @@ git clone https://github.com/CSCI-2349-F23/ps3.git
 
 5. If you `ls ps3`, you'll see that there are a few files and a `data` directory. In that directory are four subdirectories: `txt`, `csv`, `html`, and `xml`, each of which has a few files. You'll be using these files as input in the different parts of this problem set.
 
-### Part 1: Bash scripting
+### Part 1: Bash scripting with CSV files
 
 1. Write a single line with multiple commands in unix that will do the following for the file `data/csv/movies.csv`: extract the 1st, 2nd, and 8th fields, upcase everything, pick out the lines that contain the phrase "OF THE", then sort alphabetically. You should have 29 lines, where the first 3 and last 3 lines are as shown below.
 
@@ -65,7 +65,7 @@ Sources for these csv files:
 * https://github.com/reisanar/datasets/blob/master/HollywoodMovies.csv
 
 
-### Part 2: Try it in Python
+### Part 2: Python with CSV files
 
 
 
