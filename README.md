@@ -1,11 +1,8 @@
 # Problem Set 3
 
+For this problem set, you will submit a "tarball" (i.e., a `.tgz` file you create withe unix utility `tar`) of your copy of this repo after you have created several new files in different directories, as described below.
 
-
-This problem set has four components that must be submitted to Canvas:
-
-
-**All components of this problem set are due on Canvas by Tuesday, October 10, by 11:59pm Boston time.**
+**This problem set is due on Canvas by Tuesday, October 10, by 11:59pm Boston time.**
 
 ---
 
@@ -56,7 +53,7 @@ You should get 141 lines, and you should find exactly one book from the list tha
       2 THE HOUND OF THE BASKERVILLES
 ```
 
-4. Create a directory caplled `caps_files` in the `csv` directory. Now, at the end of `part1.sh`, use a `for` loop to go through each csv file, and for each file write out the output of the command you wrote for #1 to a new file in he `caps_files` directory whose name is the same as the input file but replacing `.csv` with `-caps-ofthe.csv`. For example, the output you got for #1 above applied to `movies.csv` be redirected to a file called `movies-caps-ofthe.csv`.
+4. Create a directory caplled `caps_files` in the `csv` directory. Now, at the end of `part1.sh`, use a `for` loop to go through each csv file, and for each file write out the output of the command you wrote for #1 to a new file in the `caps_files` directory whose name is the same as the input file but replacing `.csv` with `-caps-ofthe.csv`. For example, the output you got for #1 above applied to `movies.csv` be redirected to a file called `movies-caps-ofthe.csv`. After running this code, I have two files in the `caps_files` directory. You can see their contents in the screenshot below.
 
 Sources for these csv files:
 * https://corgis-edu.github.io/corgis/csv/classics/
@@ -65,9 +62,13 @@ Sources for these csv files:
 
 ### Part 2: Python with CSV files
 
-1. Replicate Part 1 #4, above, with Python. You can use the [csv library](https://docs.python.org/3/library/csv.html) or just [`split()` on commas](https://www.w3schools.com/python/ref_string_split.asp) since I removed all commas from within the fields. I've provided the code we wrote in class to do something very similar in a Python file called `part2_exercise1.py`. Start with this code. If what you produce is really different, it probably means you got help from ChatGPT, which gave some seriously over-engineered solutions!
+1. Replicate Part 1 #4, above, with Python. In the file `part2.py`, I've provided some code that is similar to what we wrote in class to write out a capitalized version of a file. Start with this code. 
 
+2. Replicate Part 1 #3, above, with Python. You can use the same `part2.py` code as starter code.
 
+Notes:
+* You can use the [csv library](https://docs.python.org/3/library/csv.html) or just [`split()` on commas](https://www.w3schools.com/python/ref_string_split.asp) since I removed all commas from within the fields. 
+* ChatGPT gave some seriously over-engineered solutions to these problems, which are likely to jump out at us when we grade.
 
 
 ### Part 3: HTML
