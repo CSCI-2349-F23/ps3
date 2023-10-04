@@ -1,16 +1,16 @@
 # Problem Set 3
 
-For this problem set, you will submit a "tarball" (i.e., a `.tgz` file you create withe unix utility `tar`) of your copy of this repo after you have created several new files in different directories, as described below.
+For this problem set, you will submit a "tarball" (i.e., a `.tgz` file you create withe unix utility `tar`) of your copy of this repo after you have created several new files in different directories, as described below. At the end of the problem set, I'll explain how you should do this.
 
 **This problem set is due on Canvas by Tuesday, October 10, by 11:59pm Boston time.**
 
 ---
 
 ### Getting started
-Remember: one of the goals in this class is to become proficient in using a text editor, navigating a linux file system with unix commands, and running programs from a command line. I'd like you to do this assignment on cslab, and the easiest way to get all the files from here up to your account on cslab is to use git. 
+Remember: the goals of this class are (among others) to become proficient in using a text editor, navigating a linux file system with unix commands, and running programs from a command line. I'd like you to do this assignment on `cslab`, and the easiest way to get all the files from here up to your account on `cslab` is to use `git`. 
 
 1. Create an account on GitHub if you don't already have one: https://github.com/signup
-2. Log into cslab.
+2. Log into `cslab`.
 3. Type the following command to "clone" this respository to your home directory on cslab.
 
 ```
@@ -21,11 +21,11 @@ git clone https://github.com/CSCI-2349-F23/ps3.git
 
 (For future problem sets, you'll just put a different URL after `git clone`. When viewing the repo in your web browser, click the green `Code` button in the upper right corner. This will display the URL, which you can copy and paste.)
 
-5. If you `ls ps3`, you'll see that there are a few files and a `data` directory. In that directory are four subdirectories: `txt`, `csv`, `html`, and `xml`, each of which has a few files. You'll be using these files as input in the different parts of this problem set.
+5. If you `ls ps3`, you'll see that there is `README.md` (this file) and two subdirectories, `csv` and `html`, each of which has a few files. You'll be using these files as starter code and as input files in the different parts of this problem set.
 
 ### Part 1: Bash scripting with CSV files
 
-1. Write a single line with multiple commands in unix that will do the following for the file `data/csv/movies.csv`: extract the 1st, 2nd, and 8th fields, upcase everything, pick out the lines that contain the phrase "OF THE", then sort alphabetically. You should have 29 lines, where the first 3 and last 3 lines are as shown below.
+1. Move into the `csv` directory. Write a single line with multiple commands in unix that will do the following for the file `movies.csv`: extract the 1st, 2nd, and 8th fields, upcase everything, pick out the lines that contain the phrase "OF THE", then sort alphabetically. You should have 29 lines, where the first 3 and last 3 lines are as shown below.
 
 ```
 BATTLE OF THE YEAR,SONY,2013
@@ -53,7 +53,7 @@ You should get 141 lines, and you should find exactly one book from the list tha
       2 THE HOUND OF THE BASKERVILLES
 ```
 
-4. Create a directory caplled `caps_files` in the `csv` directory. Now, at the end of `part1.sh`, use a `for` loop to go through each csv file, and for each file write out the output of the command you wrote for #1 to a new file in the `caps_files` directory whose name is the same as the input file but replacing `.csv` with `-caps-ofthe.csv`. For example, the output you got for #1 above applied to `movies.csv` be redirected to a file called `movies-caps-ofthe.csv`. After running this code, I have two files in the `caps_files` directory. You can see their contents in the screenshot below.
+4. Create a directory caplled `caps_files` in the `csv` directory. Now, at the end of `part1.sh`, use a `for` loop to go through each csv file, and for each file, apply the command you wrote for #1 and write the output to a new file in the `caps_files` directory whose name is the same as the input file but replaces `.csv` with `-caps-ofthe.csv`. For example, the output you got for #1 above applied to `movies.csv` would be redirected to a file called `movies-caps-ofthe.csv`. After running this code, I have two files in the `caps_files` directory. You can see their contents in the screenshot below.
 
 Sources for these csv files:
 * https://corgis-edu.github.io/corgis/csv/classics/
@@ -62,19 +62,78 @@ Sources for these csv files:
 
 ### Part 2: Python with CSV files
 
-1. Replicate Part 1 #4, above, with Python. In the `csv` directory, you'll find a python program `part2.py`, in which I've provided some code that is similar to what we wrote in class to write out a capitalized version of a file. Start with this code. 
+1. Replicate Part 1 #4, above, with Python using as starter code the python program `part2.py`. This file contains code that is similar to what we wrote in class to write out a capitalized version of a file. Start with this code. **Make a copy and name it python program `part2_exercise1.py`.**
 
-2. Replicate Part 1 #3, above, with Python. You can use the same `part2.py` code as starter code.
+Notes: 
+* You can use [`split()` on commas](https://www.w3schools.com/python/ref_string_split.asp) since I removed all commas from within the fields, or you can use the [csv library](https://docs.python.org/3/library/csv.html). The latter will be more useful in the long run, but either is okay!
 
-Notes:
-* You can use the [csv library](https://docs.python.org/3/library/csv.html) or just [`split()` on commas](https://www.w3schools.com/python/ref_string_split.asp) since I removed all commas from within the fields. 
-* ChatGPT gave some seriously over-engineered solutions to these problems, which are likely to jump out at us when we grade.
-
-
-### Part 3: HTML
+2. Replicate Part 1 #3, above, with Python. You can use your code for #1 as starter code. **Name this python program `part2_exercise2.py`.**
 
 
-### Part 4: XML
+### Part 3: Python with HTML files
 
+1. For this part, you will need to install the Beautiful Soup library. You won't be able to install just with `pip3 install` like you would on your own computer. On a server, you have to use the `--user` flag, like this:
 
-### Part 5: Combining Python with bash
+```
+python3 -m pip install --user beautifulsoup4
+```
+
+2. Now move into the the `data/html` directory. There are three HTML files from Simple English Wikipedia and some starter code in `part3.py` that extracts interesting information from an HTML files
+
+3. Right now, `part3.py` is hard-coded to parse the file `lion.html`. Change the code in `part3.py` so that it get the file to parse from the command line as the first command line argument. We've seen how to use `sys.argv` in class, and I am assuming you learned it in CS1.
+
+4. Right now, `part3.py` prints out all the text, all the h2-level headings, and the title of the page. Rewrite the program so that the user calling the program can specify which one of these three things they want to print out as a second command line argument.
+
+      * 1 = text
+      * 2 = headings
+      * 3 = title
+
+5. Right now, the h2 headings have some extra text in them encolsed in square brackes. Use the `re` library to remove the square brackets and whatever text they contain before printing out the headings.
+
+Here's a few example runs of the program in the screenshot below.
+    
+
+### Part 4: Combining Python with unix commands
+Write a little bash script in `part4.sh` that, for each html file, will call `part3.py` with the right arguments to do two things: 
+
+* The number of headings in the html file
+* The number of lines of text containing the word "cat" or "Cat".
+
+Here is some sample output:
+
+---
+
+### Deliverable
+
+You should end up with a `ps3` directory that looks like this
+
+```
+ps3 -- README.md
+    -- csv
+       -- movies.csv
+       -- books.csv
+       -- **part1.sh**
+       -- part2.py
+       -- **part2_exercise1.py**
+       -- **part2_exercise2.py**
+       -- caps_files
+          -- **movies-caps-ofthe.csv**
+          -- **books-caps-ofthe.csv**
+    -- html
+       -- lion.html
+       -- tiger.html
+       -- puma.html
+       -- **part3.py**
+       -- **part4.sh**
+```
+
+Tar and zip that up into a single .tgz file as follows (assuming you cloned `ps3` to your home directory):
+
+```
+cd ~
+tar czvf ps3.tgz ps3/
+```
+
+Upload `ps3.tgz` to Canvas as your submission to this problem set.
+
+**This problem set is due on Canvas by Tuesday, October 10, by 11:59pm Boston time.**
