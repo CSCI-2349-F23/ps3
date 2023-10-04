@@ -37,7 +37,7 @@ UNDERWORLD: RISE OF THE LYCANS,SONY,2009
 WRATH OF THE TITANS,WARNER BROS,2012
 ```
 
-2. Create a bash script called `part1.sh`. Make sure the bash script has the important first line at the top. **Then paste in the command you wrote for #1 above.** Then run it from the terminal with `bash part1.sh` and make sure that it does the right thing.
+2. Create a bash script in the `csv` directory called `part1.sh`. Make sure the bash script has the important first line at the top. **Then paste in the command you wrote for #1 above.** Then run it from the terminal with `bash part1.sh` and make sure that it does the right thing.
 
 3. Write a single line in unix that does the above for both csv files, then extracts just the first field (the movie or book title), then prints out how many time each movie or book title appears in both files, then sorts that by the number of times. **Add this line of code to `part.sh`.**
 
@@ -62,7 +62,7 @@ Sources for these csv files:
 
 ### Part 2: Python with CSV files
 
-1. Replicate Part 1 #4, above, with Python. In the file `part2.py`, I've provided some code that is similar to what we wrote in class to write out a capitalized version of a file. Start with this code. 
+1. Replicate Part 1 #4, above, with Python. In the `csv` directory, you'll find a python program `part2.py`, in which I've provided some code that is similar to what we wrote in class to write out a capitalized version of a file. Start with this code. 
 
 2. Replicate Part 1 #3, above, with Python. You can use the same `part2.py` code as starter code.
 
