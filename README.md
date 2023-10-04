@@ -90,18 +90,30 @@ python3 -m pip install --user beautifulsoup4
 5. Right now, the h2 headings have some extra text in them encolsed in square brackes. Use the `re` library to remove the square brackets and whatever text they contain before printing out the headings.
 
 Here's a few example runs of the program in the screenshot below.
+
+<img src="htmltask1.png" width="500">
     
 
 ### Part 4: Combining Python with unix commands
-Write a (very short) bash script in `part4.sh` that, loops through each html file, and calls `part3.py` with the right arguments to do these three things: 
+Write a (very short) bash script in `part4.sh` that, loops through each html file, and calls `part3.py` with the right arguments, and then does the following:
 
 * Print out the name of the file
 * Print out the number of headings in the html file
-* Print out the number of lines of text containing the word "cat" or "Cat".
+* Print out the number of lines of text containing the word "cat" or "cats" or "Cat" or "Cats".
 
-Here is some sample output:
+This is what the output should look like:
 
-<img src="html.png" width="500">
+```
+lion.html
+4
+9
+puma.html
+1
+4
+tiger.html
+2
+7
+```
 
 ---
 
