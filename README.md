@@ -95,18 +95,17 @@ Here's a few example runs of the program in the screenshot below.
     
 
 ### Part 4: Combining Python with unix commands
-Write a (very short) bash script in `part4.sh` that, loops through each html file, and calls `part3.py` with the right arguments, and then does the following:
+Write a (very short) bash script in `part4.sh` that, loops through each html file, prints out each file name, then does the following by applying unix commands to the output of `part3.py`.
 
-* Print out the name of the file
-* Print out the number of headings in the html file
 * Print out the number of lines of text containing the word "cat" or "cats" or "Cat" or "Cats".
+* Print out the number of headings in the html file
 
 This is what the output should look like:
 
 ```
-lion.html
-4
-9
+lion.html      # the file name
+4              # number of lines containing the word "cat" or "cats" or "Cat" or "Cats"
+9              # number of h2 headings
 puma.html
 1
 4
@@ -123,6 +122,8 @@ You should end up with a `ps3` directory that looks like this with the new files
 
 ```
 ps3 -- README.md
+    -- caps_files.png
+    -- htmltask1.png
     -- csv
        -- movies.csv
        -- books.csv
