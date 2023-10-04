@@ -62,10 +62,7 @@ Sources for these csv files:
 
 ### Part 2: Python with CSV files
 
-1. Replicate Part 1 #4, above, with Python using as starter code the python program `part2.py`. This file contains code that is similar to what we wrote in class to write out a capitalized version of a file. Start with this code. **Make a copy and name it python program `part2_exercise1.py`.**
-
-Notes: 
-* You can use [`split()` on commas](https://www.w3schools.com/python/ref_string_split.asp) since I removed all commas from within the fields, or you can use the [csv library](https://docs.python.org/3/library/csv.html). The latter will be more useful in the long run, but either is okay!
+1. Replicate Part 1 #4, above, with Python using as starter code the python program `part2.py`. This file contains code that is similar to what we wrote in class to write out a capitalized version of a file. Start with this code. **Make a copy and name it python program `part2_exercise1.py`.** *Note: You can use [`split()` on commas](https://www.w3schools.com/python/ref_string_split.asp) since I removed all commas from within the fields, or you can use the [csv library](https://docs.python.org/3/library/csv.html). The latter will be more useful in the long run, but either is okay!*
 
 2. Replicate Part 1 #3, above, with Python. You can use your code for #1 as starter code. **Name this python program `part2_exercise2.py`.**
 
@@ -78,15 +75,15 @@ Notes:
 python3 -m pip install --user beautifulsoup4
 ```
 
-2. Now move into the the `data/html` directory. There are three HTML files from Simple English Wikipedia and some starter code in `part3.py` that extracts interesting information from an HTML files
+2. Now move into the the `html` directory. There are three HTML files from Simple English Wikipedia and some starter code in `part3.py` that extracts interesting information from an HTML files. Try running it to see what it does, and have a look at the HTML to make sure you understand what's going on. You should also look at the entry to Lion in Simple English Wikipedia.
 
-3. Right now, `part3.py` is hard-coded to parse the file `lion.html`. Change the code in `part3.py` so that it get the file to parse from the command line as the first command line argument. We've seen how to use `sys.argv` in class, and I am assuming you learned it in CS1.
+3. Right now, `part3.py` is hard-coded to parse the file `lion.html`. Change the code in `part3.py` so that it gets the file to parse from the command line as the first command line argument. We've seen how to use `sys.argv` in class, and I am assuming you learned it in CS1.
 
 4. Right now, `part3.py` prints out all the text, all the h2-level headings, and the title of the page. Rewrite the program so that the user calling the program can specify which one of these three things they want to print out as a second command line argument.
 
-      * 1 = text
-      * 2 = headings
-      * 3 = title
+      * `1` = text
+      * `2` = headings
+      * `3` = title
 
 5. Right now, the h2 headings have some extra text in them encolsed in square brackes. Use the `re` library to remove the square brackets and whatever text they contain before printing out the headings.
 
@@ -94,10 +91,11 @@ Here's a few example runs of the program in the screenshot below.
     
 
 ### Part 4: Combining Python with unix commands
-Write a little bash script in `part4.sh` that, for each html file, will call `part3.py` with the right arguments to do two things: 
+Write a (very short) bash script in `part4.sh` that, loops through each html file, and calls `part3.py` with the right arguments to do these three things: 
 
-* The number of headings in the html file
-* The number of lines of text containing the word "cat" or "Cat".
+* Print out the name of the file
+* Print out the number of headings in the html file
+* Print out the number of lines of text containing the word "cat" or "Cat".
 
 Here is some sample output:
 
@@ -105,7 +103,7 @@ Here is some sample output:
 
 ### Deliverable
 
-You should end up with a `ps3` directory that looks like this
+You should end up with a `ps3` directory that looks like this with the new files you created in bold face. (I might have made an error, so I will update as needed.)
 
 ```
 ps3 -- README.md
@@ -134,6 +132,6 @@ cd ~
 tar czvf ps3.tgz ps3/
 ```
 
-Upload `ps3.tgz` to Canvas as your submission to this problem set.
+Scp `ps3.tgz` down to your own computer (demonstrated in the slides from a few weeks ago). Then upload `ps3.tgz` to Canvas as your submission to this problem set.
 
 **This problem set is due on Canvas by Tuesday, October 10, by 11:59pm Boston time.**
