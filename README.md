@@ -118,7 +118,7 @@ tiger.html
 
 ### Deliverable
 
-You should end up with a `ps3` directory that looks like this with the new files you created in bold face. (I might have made an error, so I will update as needed.)
+You should end up with a `ps3` directory that looks like this with the new files you created indicated with asterisks. (Note: I might have made an error, so I will update as needed. Please @ me on Slack if I missed something.)
 
 ```
 ps3 -- README.md
