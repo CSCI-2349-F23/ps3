@@ -55,6 +55,8 @@ You should get 141 lines, and you should find exactly one book from the list tha
 
 4. Create a directory caplled `caps_files` in the `csv` directory. Now, at the end of `part1.sh`, use a `for` loop to go through each csv file, and for each file, apply the command you wrote for #1 and write the output to a new file in the `caps_files` directory whose name is the same as the input file but replaces `.csv` with `-caps-ofthe.csv`. For example, the output you got for #1 above applied to `movies.csv` would be redirected to a file called `movies-caps-ofthe.csv`. After running this code, I have two files in the `caps_files` directory. You can see their contents in the screenshot below.
 
+<img src="caps_files.png" width="500">
+
 Sources for these csv files:
 * https://corgis-edu.github.io/corgis/csv/classics/
 * https://github.com/reisanar/datasets/blob/master/HollywoodMovies.csv
@@ -98,6 +100,8 @@ Write a (very short) bash script in `part4.sh` that, loops through each html fil
 * Print out the number of lines of text containing the word "cat" or "Cat".
 
 Here is some sample output:
+
+<img src="html.png" width="500">
 
 ---
 
