@@ -2,7 +2,7 @@
 
 For this problem set, you will submit a "tarball" (i.e., a `.tgz` file you create withe unix utility `tar`) of your copy of this repo after you have created several new files in different directories, as described below. At the end of the problem set, I'll explain how you should do this.
 
-**This problem set is due on Canvas by Tuesday, October 10, by 11:59pm Boston time.**
+**This problem set is due on Canvas by Wednesday, October 11, by 11:59pm Boston time.**
 
 ---
 
@@ -151,4 +151,4 @@ tar czvf ps3.tgz ps3/
 
 Scp `ps3.tgz` down to your own computer (demonstrated in the slides from a few weeks ago). Then upload `ps3.tgz` to Canvas as your submission to this problem set.
 
-**This problem set is due on Canvas by Tuesday, October 10, by 11:59pm Boston time.**
+**This problem set is due on Canvas by Wednesday, October 11, by 11:59pm Boston time.**
