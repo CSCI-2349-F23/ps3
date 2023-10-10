@@ -41,7 +41,7 @@ WRATH OF THE TITANS,WARNER BROS,2012
 
 3. Write a single line in unix that does the above for both csv files, then extracts just the first field (the movie or book title), then prints out how many time each movie or book title appears in both files, then sorts that by the number of times. **Add this line of code to `part.sh`.**
 
-You should get 141 lines, and you should find exactly one duplicate. These are the first and last three lines of my output:
+You should get 140 lines, and you should find exactly one duplicate. These are the first and last three lines of my output:
 
 ```
       1 1811 DICTIONARY OF THE VULGAR TONGUE
