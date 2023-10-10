@@ -39,7 +39,7 @@ WRATH OF THE TITANS,WARNER BROS,2012
 
 2. Create a bash script in the `csv` directory called `part1.sh`. Make sure the bash script has the important first line at the top. **Then paste in the command you wrote for #1 above.** Then run it from the terminal with `bash part1.sh` and make sure that it does the right thing.
 
-3. Write a single line in unix that does the above for both csv files, then extracts just the first field (the movie or book title), then prints out how many time each movie or book title appears in both files, then sorts that by the number of times. **Add this line of code to `part.sh`.**
+3. Write a single line in unix that does the above for both csv files, then extracts just the first field (the movie or book title), then prints out how many time each movie or book title appears in both files, then sorts that by the number of times. **Add this line of code to `part1.sh`.**
 
 You should get 140 lines, and you should find exactly one duplicate. These are the first and last three lines of my output:
 
